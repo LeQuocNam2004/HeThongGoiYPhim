@@ -1,0 +1,122 @@
+/* Modern Netflix-style CSS V2 */
+:root {
+    --bg-color: #141414;
+    --card-bg: #2b2b2b;
+    --text-color: #ffffff;
+    --accent-color: #e50914;
+    --hover-color: #f40612;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Inter', 'Roboto', sans-serif;
+}
+
+/* Movie Card Hover Effects */
+.movie-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--card-bg);
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(229, 9, 20, 0.4);
+    cursor: pointer;
+}
+
+.movie-card img {
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+    object-fit: cover;
+}
+
+.movie-title {
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+    color: var(--text-color);
+    padding: 0 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.movie-genres {
+    font-size: 0.8rem;
+    text-align: center;
+    color: #aaaaaa;
+    margin-bottom: 10px;
+    padding: 0 5px;
+}
+
+/* Star Rating */
+.star-rating {
+    color: #f5c518;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Watchlist Button Styling */
+.stButton>button {
+    background-color: var(--card-bg);
+    color: white;
+    border: 1px solid var(--accent-color);
+    border-radius: 5px;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.stButton>button:hover {
+    background-color: var(--accent-color);
+    color: white;
+    border-color: var(--hover-color);
+}
+
+/* Expander styling */
+.streamlit-expanderHeader {
+    background-color: rgba(229, 9, 20, 0.1) !important;
+    border-radius: 5px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-color);
+}
+
+/* Streamlit Main Container override */
+.stApp {
+    background-color: var(--bg-color);
+}
+
+/* Sidebar styling */
+[data-testid="stSidebar"] {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    backdrop-filter: blur(10px);
+}
+
+/* Headers */
+h1, h2, h3 {
+    color: var(--text-color) !important;
+}
